@@ -1,10 +1,7 @@
 <template>
   <div>
-    <Navbar />
-    <h1>
-      Hello World
-    </h1>
-    <img src="@/assets/logo.png" alt="Workshop Logo">
+    <Navbar/>
+    {{ $route.params.id }}
   </div>
 </template>
 
