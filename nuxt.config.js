@@ -20,5 +20,9 @@ export default {
   },
   plugins: [
     '~/plugins/breadcrumbs'
-  ]
+  ],
+  generate: {
+    fallback: true,
+    exclude: [/artists\/.+/]
+  }
 }
