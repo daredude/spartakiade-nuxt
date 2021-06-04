@@ -8,7 +8,17 @@
 
 <script>
 export default {
-  components: {
+  head () {
+    const title = 'Home'
+    const desc = 'Discographie Homepage'
+    return {
+      title,
+      meta: {
+        hid: 'description',
+        name: 'description',
+        content: desc
+      }
+    }
   }
 }
 </script>

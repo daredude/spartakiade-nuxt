@@ -43,6 +43,32 @@ export default {
   computed: {
     breadcrumbs () {
       return this.$store.state.breadcrumbLinks
+    },
+    hasBreadcrumbs () {
+      return this.breadcrumbs.length
+    }
+  },
+  head () {
+    if (!this.hasBreadcrumbs) {
+      return {}
+    }
+    const breadcrumbSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: this.breadcrumbs.map(({ name, to }, i) => ({
+        '@type': 'ListItem',
+        position: i + 1,
+        name,
+        item: (i === this.breadcrumbs.length - 1) ? undefined : `http://localhost:3000${to}`
+      }))
+    }
+    return {
+      script: [
+        {
+          type: 'application/ld+json',
+          json: breadcrumbSchema
+        }
+      ]
     }
   }
 }

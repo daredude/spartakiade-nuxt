@@ -59,6 +59,11 @@ export default {
     setBreadcrumbs (crumbs) {
       this.$store.commit('SET_BREADCRUMB_LINKS', crumbs)
     }
+  },
+  head () {
+    return {
+      title: this.artist.name
+    }
   }
 }
 </script>
