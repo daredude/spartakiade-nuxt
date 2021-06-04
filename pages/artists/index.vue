@@ -18,6 +18,14 @@ export default {
       fakeData
     }
   },
+  fetch () {
+    this.setBreadcrumbs([
+      {
+        to: '/artists',
+        name: 'Artists'
+      }
+    ])
+  },
   head () {
     return {
       title: 'Artists'

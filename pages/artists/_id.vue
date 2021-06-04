@@ -55,11 +55,6 @@ export default {
         .replace(/\[a=(.*?)]/g, '$1') // Links to other artists
     }
   },
-  methods: {
-    setBreadcrumbs (crumbs) {
-      this.$store.commit('SET_BREADCRUMB_LINKS', crumbs)
-    }
-  },
   head () {
     return {
       title: this.artist.name

@@ -8,16 +8,12 @@
 
 <script>
 export default {
+  fetch () {
+    this.setBreadcrumbs([])
+  },
   head () {
-    const title = 'Home'
-    const desc = 'Discographie Homepage'
     return {
-      title,
-      meta: {
-        hid: 'description',
-        name: 'description',
-        content: desc
-      }
+      title: 'Artists'
     }
   }
 }

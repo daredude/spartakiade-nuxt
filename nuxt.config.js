@@ -17,5 +17,8 @@ export default {
   ],
   http: {
     baseURL: 'https://api.discogs.com'
-  }
+  },
+  plugins: [
+    '~/plugins/breadcrumbs'
+  ]
 }
