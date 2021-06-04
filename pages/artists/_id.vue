@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Navbar/>
+    <Navbar />
     {{ $route.params.id }}
   </div>
 </template>

@@ -8,17 +8,17 @@
           </NuxtLink>
           <div class="flex space-x-8 ml-2 lg:ml-6">
             <NuxtLink
-                v-for="{to, name} in links"
-                :key="to"
-                v-slot="{ href, navigate, isActive }"
-                :to="to"
-                :exact="to === '/'"
+              v-for="{to, name} in links"
+              :key="to"
+              v-slot="{ href, navigate, isActive }"
+              :to="to"
+              :exact="to === '/'"
             >
               <a
-                  class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 focus:outline-none transition duration-150 ease-in-out"
-                  :class="isActive ? 'border-indigo-500 text-gray-900 focus:border-indigo-700' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:text-gray-700 focus:border-gray-300'"
-                  :href="href"
-                  @click="navigate"
+                class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium leading-5 focus:outline-none transition duration-150 ease-in-out"
+                :class="isActive ? 'border-indigo-500 text-gray-900 focus:border-indigo-700' : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 focus:text-gray-700 focus:border-gray-300'"
+                :href="href"
+                @click="navigate"
               >{{ name }}</a>
             </NuxtLink>
           </div>

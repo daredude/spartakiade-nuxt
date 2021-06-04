@@ -4,7 +4,6 @@
     <h1>
       Hello World
     </h1>
-    <img src="@/assets/logo.png" alt="Workshop Logo">
   </div>
 </template>
 
