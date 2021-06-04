@@ -15,8 +15,14 @@ export default {
     ArtistPreview
   },
   data () {
+    this.setBreadcrumbs([])
     return {
       fakeData
+    }
+  },
+  methods: {
+    setBreadcrumbs (crumbs) {
+      this.$store.commit('SET_BREADCRUMB_LINKS', crumbs)
     }
   }
 }
